@@ -2,6 +2,14 @@
 
 :root {
 }
+* {
+  button {
+    padding: 10px 2px;
+    color: #fff;
+    background-color: #2385d0;
+    border: none;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   img {
@@ -11,6 +19,7 @@ body {
 ul {
   list-style: none;
 }
+
 body {
   margin: 0;
   color: #fff;
@@ -38,7 +47,11 @@ body {
         display: flex;
         justify-content: flex-end;
         li {
-          margin: 10px;
+          margin: 0 15px;
+          a {
+            text-decoration: none;
+            color: #fff;
+          }
         }
       }
     }
@@ -54,22 +67,46 @@ body {
     width: 100%;
     color: #000;
     #eyeCatching {
-      display: flex;
-      flex-wrap: wrap;
-      li {
-        width: 50%;
+      ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          width: 50%;
+          text-align: center;
+          padding: 40px 0;
+          &:nth-child(1),
+          &:nth-child(4) {
+            background-color: #ffcccc;
+          }
+
+          &:nth-child(2) {
+            background-color: #fff;
+          }
+
+          &:nth-child(3) {
+            background-color: #fff;
+          }
+        }
       }
     }
     #adventure {
       > ul:first-of-type {
-        text-align: center;
         display: flex;
         justify-content: center;
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+          align-items: center;
+        }
         li {
           margin-top: -50px;
-          margin-bottom: 0;
+          margin-bottom: 50;
           width: 460px;
           height: 260px;
+          @media screen and (max-width: 768px) {
+            width: 50%;
+          }
           color: #fff;
           display: flex;
           flex-direction: column;
@@ -90,6 +127,10 @@ body {
             }
           }
         }
+      }
+      hgroup {
+        text-align: center;
+        margin: 100px 0;
       }
       ul:nth-of-type(2) {
         margin-bottom: 0;
@@ -144,7 +185,6 @@ body {
       background-color: #2385d0;
     }
   }
-
   footer {
     background-color: black;
     padding: 5vh;
@@ -166,7 +206,6 @@ body {
         max-width: 187px;
         white-space: normal;
         word-wrap: break-word;
-        /* line-height: 1.5; */
       }
     }
   }
