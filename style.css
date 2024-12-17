@@ -4,7 +4,7 @@
 }
 * {
   button {
-    padding: 10px 2px;
+    padding: 10px 5px;
     color: #fff;
     background-color: #2385d0;
     border: none;
@@ -36,16 +36,17 @@ body {
       justify-content: space-between;
       align-items: flex-start;
       #logo {
-        width: 40%;
+        width: 39px;
         align-self: center;
         img {
           width: 39px;
         }
       }
       #navLinks {
-        width: 60%;
+        padding-left: 0;
         display: flex;
         justify-content: flex-end;
+        align-items: center;
         li {
           margin: 0 15px;
           a {
@@ -92,6 +93,9 @@ body {
       }
     }
     #adventure {
+      ul {
+        padding-left: 0px;
+      }
       > ul:first-of-type {
         display: flex;
         justify-content: center;
@@ -101,12 +105,9 @@ body {
         }
         li {
           margin-top: -50px;
-          margin-bottom: 50;
-          width: 460px;
-          height: 260px;
-          @media screen and (max-width: 768px) {
-            width: 50%;
-          }
+          margin-bottom: 50px;
+          width: 322px;
+          height: 182px;
           color: #fff;
           display: flex;
           flex-direction: column;
@@ -131,6 +132,7 @@ body {
       hgroup {
         text-align: center;
         margin: 100px 0;
+        padding: 1%;
       }
       ul:nth-of-type(2) {
         margin-bottom: 0;
@@ -155,37 +157,30 @@ body {
       }
     }
     #newsLetter {
-      padding: 10px 225px 0 0;
-      line-height: 1.8;
-      box-sizing: border-box;
-      height: 400px;
-      width: 100%;
-      color: #fff;
-      text-align: end;
+      display: flex;
+      justify-content: end;
       background: linear-gradient(
           rgba(135, 168, 195, 0.6),
           rgba(135, 168, 1955, 0.6)
         ),
         url("./img/main_image.avif") 50% 35% / cover no-repeat;
-      ul {
-        text-align: justify;
-        width: 400px;
-        margin-left: auto;
-        li {
-          flex: 1 1 calc(100% / 3);
-          &:nth-child(2) {
-            margin-top: 20px;
-          }
+      div {
+        color: #fff;
+        width: 23%;
+        margin: 5vh 17% 5vh 0;
+        @media screen and (max-width: 768px) {
+          width: 60%;
+          margin-left: 40%;
+        }
+
+        h2 {
+          margin-left: -5%;
         }
       }
     }
-    #blueBar {
-      width: 100%;
-      height: 5px;
-      background-color: #2385d0;
-    }
   }
   footer {
+    border-top: 5px solid #2385d0;
     background-color: black;
     padding: 5vh;
     display: flex;
